@@ -1,0 +1,5 @@
+https://github.com/rktjmp/highlight-current-n.nvim
+https://github.com/mikesmithgh/kitty-scrollback.nvim
+https://github.com/m4xshen/hardtime.nvim
+https://github.com/folke/todo-comments.nvim
+https://github.com/numToStr/Comment.nvim
