@@ -24,3 +24,13 @@ return {
         end
     },
 }
+
+
+--[
+--vim.keymap.set('n', '<leader>(qualquer keybinding eu que quero)', function()
+--  require('telescope.builtin').find_files {
+--    cwd = vim.fn. ver como botar a path do projeto que eu quiser
+--  }
+--end)
+--
+--]--
