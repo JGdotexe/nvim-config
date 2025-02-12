@@ -9,6 +9,9 @@ vim.opt.clipboard = "unnamedplus"
 -- Clear the command line when pressing Esc in command-line mode
 vim.api.nvim_set_keymap('c', '<Esc>', '<C-c>', { noremap = true, silent = true })
 
+vim.keymap.set("n", "-","<cmd>Oil<CR>")
+vim.api.nvim_set_keymap('n', '<space>/', "gcc", { noremap = false, silent = true })
+
 vim.cmd([[
   augroup CustomHighlights
     autocmd!
