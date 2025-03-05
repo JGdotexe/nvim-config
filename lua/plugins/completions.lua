@@ -10,7 +10,7 @@ return {
     },
     {
         "rafamadriz/friendly-snippets",
-    },
+   },
     {
         "hrsh7th/nvim-cmp",
         config = function()
@@ -34,11 +34,15 @@ return {
                     ['<CR>'] = cmp.mapping.confirm({ select = true }),
                 }),
                 sources = cmp.config.sources({
-                    { name = 'nvim_lsp' },
+                {
+                    name = 'nvim_lsp',
+                    entry_filter = function(entry, ctx)
+                        local kind = require('cmp.types').lsp.CompletionItemKind[entry:get_kind()]
+                        return kind ~= 'Text'
+                    end,
+                },
                     { name = 'luasnip' }, -- For luasnip users.
-                }, {
-                        { name = 'buffer' },
-                    })
+               })
             })
 
             -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
@@ -57,7 +61,9 @@ return {
             cmp.setup.cmdline({ '/', '?' }, {
                 mapping = cmp.mapping.preset.cmdline(),
                 sources = {
-                    { name = 'buffer' }
+                    -- { name = 'buffer' }
+                    { name = 'nvim_lsp' }, -- LSP-based completions (functions, variables, etc.)
+                    { name = 'luasnip' },
                 }
             })
         end
