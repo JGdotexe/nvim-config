@@ -41,6 +41,7 @@ return {
                         return kind ~= 'Text'
                     end,
                 },
+                    { name = 'render-markdown' },
                     { name = 'luasnip' }, -- For luasnip users.
                })
             })

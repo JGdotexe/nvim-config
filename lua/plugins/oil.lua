@@ -1,9 +1,9 @@
 return {
   'stevearc/oil.nvim',
   ---@module 'oil'
-  ---@type oil.SetupOpts
+  ---@type oil.setupopts
   opts = {},
-  -- Optional dependencies
+  -- optional dependencies
   dependencies = { { "echasnovski/mini.icons", opts = {} } },
   -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
 }
