@@ -9,7 +9,12 @@ vim.opt.clipboard = "unnamedplus"
 -- Clear the command line when pressing Esc in command-line mode
 vim.api.nvim_set_keymap('c', '<Esc>', '<C-c>', { noremap = true, silent = true })
 
-vim.keymap.set("n", "-","<cmd>Oil<CR>")
+-- Make splitright defoult
+vim.o.splitright = true
+
+vim.keymap.set("n", "-", "<cmd>Oil<CR>")
+vim.keymap.set('n', '<S-l>', ':tabn<CR>', { desc = 'Next tab' })
+vim.keymap.set('n', '<S-h>', ':tabp<CR>', { desc = 'Previous tab' })
 vim.api.nvim_set_keymap('n', '<space>/', "gcc", { noremap = false, silent = true })
 
 vim.cmd([[
